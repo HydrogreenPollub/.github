@@ -3,6 +3,10 @@ Hydros is a prototype of an innovative three-wheeled vehicle equipped with an el
 
 The project's goal is to participate and podium in the Shell Eco Marathon competitions. The Shell Eco Marathon competitions take place annually on three continents - Europe, America, and Asia. Shell Eco-Marathon is an event that brings together the worlds of science, technology, and industry in a competition where vehicle efficiency in terms of energy consumption is paramount.
 
+<div style="text-align:center">    
+    <img src="./../images/2023-10-15_16-55.png" />
+</div>
+
 ## Current projects
 - [Fuel cylinder unit PCB](https://github.com/HydrogreenPollub/fuel-cell-pcb)
 
