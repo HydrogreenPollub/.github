@@ -9,6 +9,15 @@ The project's goal is to participate and podium in the Shell Eco Marathon compet
 
 ## Current projects
 - [Fuel cylinder unit PCB](https://github.com/HydrogreenPollub/fuel-cell-pcb)
+- [Fuel cell unit PCB](https://github.com/HydrogreenPollub/fuel-cell-pcb)
+- [Motor driver unit PCB](https://github.com/HydrogreenPollub/motor-driver-pcb)
+- Energy flot unit PCB
+- Peripherials unit PCB
+- Telemetry unit PCB
+- Steering wheel unit PCB
+- Hydrogen sensor PCB
+- Battery management unit PCB
+- [PCB template](https://github.com/HydrogreenPollub/template-pcb)
 
 ## Legacy projects
 - [Master controller](https://github.com/HydrogreenPollub/master-controller-stm32) - STM32 MCU that governs all PCBs telling them what is the current situation of the vehicle
