@@ -12,7 +12,7 @@ The project's goal is to participate and podium in the Shell Eco Marathon compet
 - [Fuel cell unit PCB](https://github.com/HydrogreenPollub/fuel-cell-pcb)
 - [Auxillary unit PCB](https://github.com/HydrogreenPollub/auxillary-pcb)
 - [Motor driver unit PCB](https://github.com/HydrogreenPollub/motor-driver-pcb)
-- Energy flot unit PCB
+- [Energy flot unit PCB](https://github.com/HydrogreenPollub/energy-flow-v2-pcb)
 - Telemetry unit PCB
 - Steering wheel unit PCB
 - Hydrogen sensor PCB
