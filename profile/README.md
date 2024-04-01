@@ -1,5 +1,5 @@
-## Hydrogreen Pollub
-Hydros is a prototype of an innovative three-wheeled vehicle equipped with an electric drive and **hydrogen** fuel cell. The vehicle has been designed to minimize energy losses through its aerodynamic body, incredibly low mechanical resistance, and a highly efficient drive system. The construction is based on a monocoque made of modern lightweight composite materials.
+# Hydrogreen Pollub
+*Hydros* is a prototype of an innovative three-wheeled vehicle equipped with an electric drive and **hydrogen** fuel cell. The vehicle has been designed to minimize energy losses through its aerodynamic body, incredibly low mechanical resistance, and a highly efficient drive system. The construction is based on a monocoque made of modern lightweight composite materials.
 
 The project's goal is to participate and podium in the Shell Eco Marathon competitions. The Shell Eco Marathon competitions take place annually on three continents - Europe, America, and Asia. Shell Eco-Marathon is an event that brings together the worlds of science, technology, and industry in a competition where vehicle efficiency in terms of energy consumption is paramount.
 
@@ -8,20 +8,31 @@ The project's goal is to participate and podium in the Shell Eco Marathon compet
 </div>
 
 ## Current PCB projects
-- [Energy flow unit PCB](https://github.com/HydrogreenPollub/energy-flow-pcb)
-- [Fuel cell control unit PCB](https://github.com/HydrogreenPollub/fuel-cell-pcb)
-- [Hydrogen cylinder unit PCB](https://github.com/HydrogreenPollub/hydrogen-cylinder-pcb)
-- [Motor driver unit PCB](https://github.com/HydrogreenPollub/motor-driver-pcb)
-- [Auxillary unit PCB](https://github.com/HydrogreenPollub/auxillary-pcb)
-- Telemetry control unit PCB
-- Steering wheel unit PCB
+- [EFU](https://github.com/HydrogreenPollub/energy-flow-pcb) - Energy flow unit PCB
+- [FCCU](https://github.com/HydrogreenPollub/fuel-cell-pcb) - Fuel cell control unit PCB
+- [HCU](https://github.com/HydrogreenPollub/hydrogen-cylinder-pcb) - Hydrogen cylinder unit PCB
+- [MCU](https://github.com/HydrogreenPollub/motor-driver-pcb) - Motor control unit PCB
+- Auxillary unit PCB (*in future*)
+- Telemetry unit PCB (*in future*)
+- Steering wheel unit PCB (*in future*)
+- [KiCAD symbol library](https://github.com/HydrogreenPollub/symbol-library-kicad)
 - [PCB template](https://github.com/HydrogreenPollub/template-pcb)
 
 ## Current software projects
-- [Telemetry](https://github.com/HydrogreenPollub/telemetry-esp32) - ESP32 MCU pushing data to our GIT stack (Grafana, InfluxDB, Telegraf)
+- [Energy flow](https://github.com/HydrogreenPollub/energy-flow-esp32)
+- [Fuel cell](https://github.com/HydrogreenPollub/fuel-cell-esp32)
+- [Hydrogen cylinder](https://github.com/HydrogreenPollub/hydrogen-cylinder-esp32)
+- [Motor control](https://github.com/HydrogreenPollub/motor-control-esp32)
+- [Telemetry](https://github.com/HydrogreenPollub/telemetry-esp32) - ESP32 MCU sending data to our GIT stack (Grafana, InfluxDB, Telegraf)
 
-## Legacy projects
-- [Master controller](https://github.com/HydrogreenPollub/master-controller-stm32) - STM32 MCU that governs all PCBs telling them what is the current situation of the vehicle
-- [Energy flow controller](https://github.com/HydrogreenPollub/energy-flow-stm32) - STM32 MCU taking care about energy flow from fuell cell and supercapacitor to motor controller
-- [Steering wheel controller](https://github.com/HydrogreenPollub/steering-wheel-stm32) - STM32 MCU taking input from buttons and swiches on steering wheel, as well as providing data to HMI panel
-- [Test vehicle controller](https://github.com/HydrogreenPollub/test-vehicle-esp32) - ESP32 MCU for a simple test vehicle control
+#### ESP32 shared components
+- [UART](https://github.com/HydrogreenPollub/uart-component-esp32)
+- [Connectivity](https://github.com/HydrogreenPollub/connectivity-component-esp32)
+- [SD card](https://github.com/HydrogreenPollub/sdcard-component-esp32)
+- [OTA](https://github.com/HydrogreenPollub/ota-component-esp32)
+
+## Legacy software projects
+- [Master](https://github.com/HydrogreenPollub/master-controller-stm32) - STM32 MCU that governs all PCBs telling them what is the current situation of the vehicle
+- [Energy flow](https://github.com/HydrogreenPollub/energy-flow-stm32) - STM32 MCU taking care about energy flow from fuell cell and supercapacitor to motor controller
+- [Steering wheel](https://github.com/HydrogreenPollub/steering-wheel-stm32) - STM32 MCU taking input from buttons and swiches on steering wheel, as well as providing data to HMI panel
+- [Test vehicle](https://github.com/HydrogreenPollub/test-vehicle-esp32) - ESP32 MCU for a simple test vehicle control
