@@ -12,9 +12,9 @@ The project's goal is to participate and podium in the Shell Eco Marathon compet
 - [FCCU](https://github.com/HydrogreenPollub/fuel-cell-pcb) - Fuel cell control unit PCB
 - [HCU](https://github.com/HydrogreenPollub/hydrogen-cylinder-pcb) - Hydrogen cylinder unit PCB
 - [MCU](https://github.com/HydrogreenPollub/motor-driver-pcb) - Motor control unit PCB
-- Auxillary unit PCB (*in future*)
 - Telemetry unit PCB (*in future*)
 - Steering wheel unit PCB (*in future*)
+- Auxillary unit PCB (*in future*)
 - [KiCAD symbol library](https://github.com/HydrogreenPollub/symbol-library-kicad)
 - [PCB template](https://github.com/HydrogreenPollub/template-pcb)
 
@@ -26,10 +26,13 @@ The project's goal is to participate and podium in the Shell Eco Marathon compet
 - [Telemetry](https://github.com/HydrogreenPollub/telemetry-esp32) - ESP32 MCU sending data to our GIT stack (Grafana, InfluxDB, Telegraf)
 
 #### ESP32 shared components
-- [UART](https://github.com/HydrogreenPollub/uart-component-esp32)
-- [Connectivity](https://github.com/HydrogreenPollub/connectivity-component-esp32)
+- [Connectivity](https://github.com/HydrogreenPollub/connectivity-component-esp32) - WiFi + MQTT
+- [UART](https://github.com/HydrogreenPollub/uart-component-esp32) - UART over RS422 for steering wheel MCU
+- [FOTA](https://github.com/HydrogreenPollub/ota-component-esp32) - Firmware over the air
+- [IMU](https://github.com/HydrogreenPollub/connectivity-component-esp32) - Inertial measurement unit (9 axis)
+- [GPS](https://github.com/HydrogreenPollub/gps-component-esp32)
 - [SD card](https://github.com/HydrogreenPollub/sdcard-component-esp32)
-- [OTA](https://github.com/HydrogreenPollub/ota-component-esp32)
+
 
 ## Legacy software projects
 - [Master](https://github.com/HydrogreenPollub/master-controller-stm32) - STM32 MCU that governs all PCBs telling them what is the current situation of the vehicle
