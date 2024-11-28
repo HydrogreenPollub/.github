@@ -19,6 +19,7 @@ The project's goal is to participate and podium in the Shell Eco Marathon compet
 - [PCB template](https://github.com/HydrogreenPollub/template-pcb)
 
 ## Current software projects
+- [Energy flow unit_test] (https://github.com/HydrogreenPollub/EFU_test_code)
 - [Energy flow](https://github.com/HydrogreenPollub/energy-flow-esp32)
 - [Fuel cell](https://github.com/HydrogreenPollub/fuel-cell-esp32)
 - [Hydrogen cylinder](https://github.com/HydrogreenPollub/hydrogen-cylinder-esp32)
