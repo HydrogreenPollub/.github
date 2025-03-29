@@ -8,6 +8,13 @@ The project's goal is to participate and podium in the Shell Eco Marathon compet
 </div>
 
 ## Current PCB projects
+- [Master](https://github.com/HydrogreenPollub/master-pcb) - Master - mesurment and safty unit PCB
+- [FCCUv2](https://github.com/HydrogreenPollub/fccu_v2-pcb) - Fuel cell control unit v2 PCB
+- [DCU](In progres) - Dual converter unit with fuel cell control PCB
+- [FCM](In progres) - Fuel cell module - Current control and FC short PCB
+- Telemetry unit PCB (*in future*)
+
+## 2024 PCB projects
 - [EFU](https://github.com/HydrogreenPollub/energy-flow-pcb) - Energy flow unit PCB
 - [FCCU](https://github.com/HydrogreenPollub/fuel-cell-pcb) - Fuel cell control unit PCB
 - [HCU](https://github.com/HydrogreenPollub/hydrogen-cylinder-pcb) - Hydrogen cylinder unit PCB
@@ -18,7 +25,7 @@ The project's goal is to participate and podium in the Shell Eco Marathon compet
 - [KiCAD symbol library](https://github.com/HydrogreenPollub/symbol-library-kicad)
 - [PCB template](https://github.com/HydrogreenPollub/template-pcb)
 
-## Current software projects
+## 2024 software projects
 - [Energy flow unit_test](https://github.com/HydrogreenPollub/EFU_test_code)
 - [Energy flow](https://github.com/HydrogreenPollub/energy-flow-esp32)
 - [Fuel cell](https://github.com/HydrogreenPollub/fuel-cell-esp32)
@@ -35,7 +42,7 @@ The project's goal is to participate and podium in the Shell Eco Marathon compet
 - [SD card](https://github.com/HydrogreenPollub/sdcard-component-esp32)
 
 
-## Legacy software projects
+## 2020-2022 Legacy software projects
 - [Master](https://github.com/HydrogreenPollub/master-controller-stm32) - STM32 MCU that governs all PCBs telling them what is the current situation of the vehicle
 - [Energy flow](https://github.com/HydrogreenPollub/energy-flow-stm32) - STM32 MCU taking care of energy flow from fuell cell and supercapacitor to motor controller
 - [Steering wheel](https://github.com/HydrogreenPollub/steering-wheel-stm32) - STM32 MCU taking input from buttons and swiches on steering wheel, as well as providing data to HMI panel
