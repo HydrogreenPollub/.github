@@ -8,10 +8,10 @@ The project's goal is to participate and podium in the Shell Eco Marathon compet
 </div>
 
 ## Current PCB projects
-- [Master](https://github.com/HydrogreenPollub/master-pcb) - Master - mesurment and safty unit PCB
+- [Master](https://github.com/HydrogreenPollub/master-pcb) - Master - measurment and safety unit PCB
 - [FCCUv2](https://github.com/HydrogreenPollub/fccu_v2-pcb) - Fuel cell control unit v2 PCB
-- [DCU](In progres) - Dual converter unit with fuel cell control PCB
-- [FCM](In progres) - Fuel cell module - Current control and FC short PCB
+- [DCU](In progress) - Dual converter unit with fuel cell control PCB
+- [FCM](In progress) - Fuel cell module - Current control and FC short PCB
 - Telemetry unit PCB (*in future*)
 
 ## 2024 PCB projects
