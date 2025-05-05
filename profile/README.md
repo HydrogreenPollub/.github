@@ -7,11 +7,17 @@ The project's goal is to participate and podium in the Shell Eco Marathon compet
     <img src="/images/2023-10-15_16-55.png" />
 </div>
 
+## Current software projects 
+- [FCCUv2].(https://github.com/HydrogreenPollub/FCCU_v2). - Fuel Cell Control Module with ESP32 S3
+- .[SWU].(https://github.com/HydrogreenPollub/Steering_wheel_stm32_v2)
+
 ## Current PCB projects
 - [Master](https://github.com/HydrogreenPollub/master-pcb) - Master - measurment and safety unit PCB
 - [FCCUv2](https://github.com/HydrogreenPollub/fccu_v2-pcb) - Fuel cell control unit v2 PCB
 - [DCU](In progress) - Dual converter unit with fuel cell control PCB
 - [FCM](In progress) - Fuel cell module - Current control and FC short PCB
+- [LED_module]
+  
 - Telemetry unit PCB (*in future*)
 
 ## 2024 PCB projects
