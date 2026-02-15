@@ -22,6 +22,9 @@ We are migrating our core vehicle control systems to Zephyr RTOS for better modu
 
 * ⚡ Fuel cell module (FCM) · [PCB](https://github.com/HydrogreenPollub/pcb-fuel-cell-module)
   <br> Power stage and current control for the fuel cell stack.
+  
+* 🔌 Power distribution unit (PDU) · [PCB](https://github.com/mbagietson/BorkConnect)
+  <br> Power stage and current control for the fuel cell stack.
 
 * 🏎️ Steering wheel unit (SWU) · [PCB](https://github.com/HydrogreenPollub/pcb-stm32-steering-wheel-v2) · [Firmware](https://github.com/HydrogreenPollub/zephyr-steering-wheel)
   <br> Driver interface and HMI logic. Manages steering wheel buttons, the dead man's switch, and cockpit displays.
@@ -129,4 +132,3 @@ flowchart TD
 - [Steering wheel](https://github.com/HydrogreenPollub/steering-wheel-stm32) - STM32 MCU taking input from buttons and swiches on steering wheel, as well as providing data to HMI panel
 - [Test vehicle](https://github.com/HydrogreenPollub/test-vehicle-esp32) - ESP32 MCU for a simple test vehicle control
 </details>
-
