@@ -24,7 +24,7 @@ We are migrating our core vehicle control systems to Zephyr RTOS for better modu
   <br> Power stage and current control for the fuel cell stack.
 
 * 🏎️ Steering wheel unit (SWU) · [PCB](https://github.com/HydrogreenPollub/pcb-stm32-steering-wheel-v2) · [Firmware](https://github.com/HydrogreenPollub/zephyr-steering-wheel)
-  <br> Driver interface, paddle shifters, and HMI logic.
+  <br> Driver interface and HMI logic. Manages steering wheel buttons, the dead man's switch, and cockpit displays.
 
 * 🔄 Can converter unit (CCU) · [PCB](https://github.com/HydrogreenPollub/stm32-can-converter-unit) · [Firmware](https://github.com/HydrogreenPollub/zephyr-can-converter-unit)
   <br> Signal translation bridge for vehicle bus communication.
@@ -52,7 +52,7 @@ High-level computing, data acquisition, and cloud connectivity.
 * 🐧 Onboard computer (RPi4) · [Yocto OS](https://github.com/HydrogreenPollub/rp4-yocto) · [Telemetry layer](https://github.com/HydrogreenPollub/rp4-telemetry)
   <br> Custom Linux distribution and application logic for LoRa, CAN, and local logging.
 
-* 📻 Base station tools · [Base station firmware](https://github.com/HydrogreenPollub/rp2040-base-station) · [PC publisher](https://github.com/HydrogreenPollub/pc-mqtt-publisher)
+* 📻 Base station tools · [Base station firmware](https://github.com/HydrogreenPollub/rp2040-base-station) · [PC publisher script](https://github.com/HydrogreenPollub/pc-mqtt-publisher)
   <br> RP2040-based LoRa receiver and desktop utility for data transmission.
 
 * ☁️ Cloud infrastructure · [Server subscriber](https://github.com/HydrogreenPollub/server-mqtt-subscriber)
@@ -109,7 +109,7 @@ flowchart TD
 	
 ### 2024 PCB projects
 - [EFU](https://github.com/HydrogreenPollub/energy-flow-pcb) - Energy flow unit PCB
-- [FCCU](https://github.com/HydrogreenPollub/fuel-cell-pcb) - Fuel cell control unit PCB
+- [FCCU](https://github.com/HydrogreenPollub/fuel-cell-pcb) - Fuel cell control unit PCB[](url)
 - [HCU](https://github.com/HydrogreenPollub/hydrogen-cylinder-pcb) - Hydrogen cylinder unit PCB
 - [MCU](https://github.com/HydrogreenPollub/motor-driver-pcb) - Motor control unit PCB
 - [KiCAD symbol library](https://github.com/HydrogreenPollub/symbol-library-kicad)
