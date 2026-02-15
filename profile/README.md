@@ -9,44 +9,82 @@ The project's goal is to participate and podium in the Shell Eco Marathon compet
     <img src="/images/2023-10-15_16-55.png" />
 </div>
 
-## On-Vehicle Systems
-- [esp32-fccu](https://github.com/HydrogreenPollub/esp32-fuel-cell-control-unit) - fuel cell control unit
-- [stm32-swu](https://github.com/HydrogreenPollub/stm32-steering-wheel-unit) - steering wheel unit
-- [rp4-yocto](https://github.com/HydrogreenPollub/rp4-yocto) - custom Linux distribution for telemetry system based on RP4 and Yocto
-- [rp4-telemetry](https://github.com/HydrogreenPollub/rp4-telemetry) - telemetry system with LoRa, CAN and SD card support
-- [ti-mcu](https://github.com/HydrogreenPollub/tm4c-master-control-unit) - master control unit based on Texas Instrument microcontroller
 
-## Desktop & Cloud Tools
-- [rp2040-base-station](https://github.com/HydrogreenPollub/rp2040-base-station) - LoRa receiver
-- [pc-mqtt-publisher](https://github.com/HydrogreenPollub/pc-mqtt-publisher) - telemetry publisher on PC
-- [server-mqtt-subscriber](https://github.com/HydrogreenPollub/server-mqtt-subscriber) - telemetry subscriber on server
+## Vehicle systems (hardware & software)
 
+We are migrating our core vehicle control systems to Zephyr RTOS for better modularity and reliability.
+
+* 🧠 Master control unit (MCU) · [PCB](https://github.com/HydrogreenPollub/pcb-master-controller-unit) · [Firmware](https://github.com/HydrogreenPollub/tm4c-master-control-unit) · [SCADE model](https://github.com/HydrogreenPollub/scade-master-control-unit)
+  <br> Central vehicle computer based on TI TM4C. Handles safety logic and state management.
+
+* 🔋 Fuel cell control unit (FCCU) · [PCB](https://github.com/HydrogreenPollub/pcb-fuel-cell-control) · [Firmware](https://github.com/HydrogreenPollub/zephyr-fuel-cell-control-unit) 
+  <br> Logic and regulation for the hydrogen stack.
+
+* ⚡ Fuel cell module (FCM) · [PCB](https://github.com/HydrogreenPollub/pcb-fuel-cell-module)
+  <br> Power stage and current control for the fuel cell stack.
+
+* 🏎️ Steering wheel unit (SWU) · [PCB](https://github.com/HydrogreenPollub/pcb-stm32-steering-wheel-v2) · [Firmware](https://github.com/HydrogreenPollub/zephyr-steering-wheel)
+  <br> Driver interface, paddle shifters, and HMI logic.
+
+* 🔄 Can converter unit (CCU) · [PCB](https://github.com/HydrogreenPollub/stm32-can-converter-unit) · [Firmware](https://github.com/HydrogreenPollub/zephyr-can-converter-unit)
+  <br> Signal translation bridge for vehicle bus communication.
+
+* 💡 Lighting control unit (LCU) · [PCB](https://github.com/HydrogreenPollub/pcb-lighting-control-unit) · [Firmware](https://github.com/HydrogreenPollub/zephyr-lighting-control-unit)
+  <br> Manages external indicators, brake lights, and signaling.
+
+Planned: A converter to bridge the fuel cell with the vehicle's main power circuit.
+
+## Libraries & definitions
+
+* 📦 Altium designer library · [Repo](https://github.com/HydrogreenPollub/pcb-library-hydrogreen)
+  <br> Common footprints and symbols for hardware design.
+
+* 📒 CAN definitions · [Repo](https://github.com/HydrogreenPollub/lib-can-definitions)
+  <br> Single source of truth for CAN IDs and frame structures.
+
+* 📝 Documentation · [Repo](https://github.com/HydrogreenPollub/latex-hydrogreen-documentation)
+  <br> Full technical documentation in LaTeX.
+
+## Telemetry system
+
+High-level computing, data acquisition, and cloud connectivity.
+
+* 🐧 Onboard computer (RPi4) · [Yocto OS](https://github.com/HydrogreenPollub/rp4-yocto) · [Telemetry layer](https://github.com/HydrogreenPollub/rp4-telemetry)
+  <br> Custom Linux distribution and application logic for LoRa, CAN, and local logging.
+
+* 📻 Base station tools · [Base station firmware](https://github.com/HydrogreenPollub/rp2040-base-station) · [PC publisher](https://github.com/HydrogreenPollub/pc-mqtt-publisher)
+  <br> RP2040-based LoRa receiver and desktop utility for data transmission.
+
+* ☁️ Cloud infrastructure · [Server subscriber](https://github.com/HydrogreenPollub/server-mqtt-subscriber)
+  <br> Backend service for incoming telemetry data aggregation.
+  
+Here is a look at how these software telemetry components connect to each other:
 ```mermaid
 flowchart TD
- subgraph SERVER["Server"]
+    subgraph SERVER["Server"]
         G["Server Subscriber (Python)"]
-  end
- subgraph BASE["Base Station"]
+    end
+    subgraph BASE["Base Station"]
         n4["Base Station (RP2040)"]
         n7["PC Publisher (Python)"]
-  end
- subgraph s1["Telemetry System"]
+    end
+    subgraph s1["Telemetry System"]
         n6["Custom Linux distro<br>(Yocto project)"]
         n5["Logic (Yocto layer)"]
-  end
- subgraph VEHICLE["Vehicle"]
-    direction LR
+    end
+    subgraph VEHICLE["Vehicle"]
+        direction LR
         s1
         A["Master Controller (TI)"]
         B["FCCU (ESP32)"]
         n2["Steering Wheel (STM32)"]
         n3(("CAN Bus"))
-  end
- subgraph s2["Software"]
+    end
+    subgraph s2["Software"]
         SERVER
         BASE
         VEHICLE
-  end
+    end
     VEHICLE -- LoRa <br> --> BASE
     BASE -- Internet </br> --> SERVER
     n4 --> n7
@@ -54,7 +92,7 @@ flowchart TD
     B --- n3
     n2 --- n3
     n3 --- s1
-	
+    
     click G "https://github.com/HydrogreenPollub/server-mqtt-subscriber";
     click n6 "https://github.com/HydrogreenPollub/rp4-yocto";
     click n5 "https://github.com/HydrogreenPollub/rp4-telemetry";
@@ -65,24 +103,19 @@ flowchart TD
     click n7 "https://github.com/HydrogreenPollub/pc-mqtt-publisher";
 ```
 
-## Current PCB projects
-- [Master](https://github.com/HydrogreenPollub/master-pcb) - Master - measurment and safety unit PCB
-- [FCCUv2](https://github.com/HydrogreenPollub/fccu_v2-pcb) - Fuel cell control unit v2 PCB
-- [DCU](In progress) - Dual converter unit with fuel cell control PCB
-- [FCM](In progress) - Fuel cell module - Current control and FC short PCB
-- [LED_module]
-- Telemetry unit PCB (*in future*)
-
-## 2024 PCB projects
+## Legacy projects
+<details>
+<summary><b>📂 Click to view legacy and archived projects</b></summary>
+	
+### 2024 PCB projects
 - [EFU](https://github.com/HydrogreenPollub/energy-flow-pcb) - Energy flow unit PCB
 - [FCCU](https://github.com/HydrogreenPollub/fuel-cell-pcb) - Fuel cell control unit PCB
 - [HCU](https://github.com/HydrogreenPollub/hydrogen-cylinder-pcb) - Hydrogen cylinder unit PCB
 - [MCU](https://github.com/HydrogreenPollub/motor-driver-pcb) - Motor control unit PCB
-
 - [KiCAD symbol library](https://github.com/HydrogreenPollub/symbol-library-kicad)
 - [PCB template](https://github.com/HydrogreenPollub/template-pcb)
 
-## 2024 software projects
+### 2024 software projects
 - [Energy flow unit_test](https://github.com/HydrogreenPollub/EFU_test_code)
 - [Energy flow](https://github.com/HydrogreenPollub/energy-flow-esp32)
 - [Fuel cell](https://github.com/HydrogreenPollub/fuel-cell-esp32)
@@ -90,8 +123,10 @@ flowchart TD
 - [Motor control](https://github.com/HydrogreenPollub/motor-control-esp32)
 - [Telemetry](https://github.com/HydrogreenPollub/telemetry-esp32) - ESP32 MCU sending data to our GIT stack (Grafana, InfluxDB, Telegraf)
 
-## 2020-2022 Legacy software projects
+### 2020-2022 Legacy software projects
 - [Master](https://github.com/HydrogreenPollub/master-controller-stm32) - STM32 MCU that governs all PCBs telling them what is the current situation of the vehicle
 - [Energy flow](https://github.com/HydrogreenPollub/energy-flow-stm32) - STM32 MCU taking care of energy flow from fuell cell and supercapacitor to motor controller
 - [Steering wheel](https://github.com/HydrogreenPollub/steering-wheel-stm32) - STM32 MCU taking input from buttons and swiches on steering wheel, as well as providing data to HMI panel
 - [Test vehicle](https://github.com/HydrogreenPollub/test-vehicle-esp32) - ESP32 MCU for a simple test vehicle control
+</details>
+
