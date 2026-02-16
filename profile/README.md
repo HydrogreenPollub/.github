@@ -12,7 +12,7 @@ The project's goal is to participate and podium in the Shell Eco Marathon compet
 
 ## Vehicle systems (hardware & software)
 
-We are migrating our core vehicle control systems to Zephyr RTOS for better modularity and reliability.
+We are migrating our core vehicle control systems to Zephyr RTOS for better modularity and reliability. To set up the complete development environment with all firmware repositories, use the [Zephyr manifest](https://github.com/HydrogreenPollub/zephyr-manifest).
 
 * 🧠 Master control unit (MCU) · [PCB](https://github.com/HydrogreenPollub/pcb-master-controller-unit) · [Firmware](https://github.com/HydrogreenPollub/tm4c-master-control-unit) · [SCADE model](https://github.com/HydrogreenPollub/scade-master-control-unit)
   <br> Central vehicle computer based on TI TM4C. Handles safety logic and state management.
