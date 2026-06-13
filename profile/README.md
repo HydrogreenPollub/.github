@@ -45,7 +45,7 @@ Planned: A converter to bridge the fuel cell with the vehicle's main power circu
 * 📒 CAN definitions · [Repo](https://github.com/HydrogreenPollub/lib-can-definitions)
   <br> Single source of truth for CAN IDs and frame structures.
 
-* 📝 Documentation · [Repo](https://github.com/HydrogreenPollub/latex-hydrogreen-documentation)
+* 📝 Documentation · [Typst](https://github.com/HydrogreenPollub/typst-hydrogreen-documentation) · [LaTeX](https://github.com/HydrogreenPollub/latex-hydrogreen-documentation) (old)
   <br> Full technical documentation in LaTeX.
 
 ## Telemetry system
