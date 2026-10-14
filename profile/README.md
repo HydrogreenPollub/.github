@@ -60,6 +60,8 @@ High-level computing, data acquisition, and cloud connectivity.
 
 * ☁️ Cloud infrastructure · [Server subscriber](https://github.com/HydrogreenPollub/server-mqtt-subscriber)
   <br> Backend service for incoming telemetry data aggregation.
+
+  Thermal camera program - [SeekThermal Compact Windows App](https://github.com/HydrogreenPollub/seakthermal_windows)
   
 Here is a look at how these software telemetry components connect to each other:
 ```mermaid
